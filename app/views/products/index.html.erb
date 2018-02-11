@@ -2,7 +2,7 @@
   <h1>Liste des produits</h1>
     <ul>
       <% @products.each do |product| %>
-      <li><%= product %></li>
+      <li><%= product.name %> (<%= product.url %>)</li>
       <% end %>
     </ul>
 
