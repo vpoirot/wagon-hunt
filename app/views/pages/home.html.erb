@@ -5,3 +5,17 @@
     <%= link_to "All products", products_path, class:"btn btn-success btn-lg" %>
   </div>
 </div>
+
+<div class="container p-t-20">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <%= link_to "Tech", products_path(category: "Tech"), class: "card-category tech" %>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <%= link_to "Education", products_path(category: "Education"), class: "card-category education" %>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <%= link_to "Lifestyle", products_path(category: "Lifestyle"), class: "card-category lifestyle" %>
+    </div>
+  </div>
+</div>

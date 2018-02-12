@@ -8,6 +8,6 @@
 
 Product.destroy_all
 
-Product.create!(name: "Gogol", url:"http://www.gogol.com", tagline:"Best search")
-Product.create!(name: "Vincent", url:"http://www.vincent.com", tagline:"Best man")
-Product.create!(name: "Marion", url:"http://www.marion.com", tagline:"Best woman")
+Product.create!(name: "Gogol", url:"http://www.gogol.com", tagline:"Best search", category:"Tech")
+Product.create!(name: "Vincent", url:"http://www.vincent.com", tagline:"Best man",category:"Education")
+Product.create!(name: "Marion", url:"http://www.marion.com", tagline:"Best woman",category:"Lifestyle")
