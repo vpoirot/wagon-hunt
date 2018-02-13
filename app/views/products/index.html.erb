@@ -11,7 +11,11 @@
               <div class="product-arrow"></div>
               <div class='product-count'>0</div>
             </div>
-            <img src="http://unsplash.it/300/200?random" alt="kudoz" class="product-image hidden-xs">
+            <% if product.photo? %>
+              <%= cl_image_tag product.photo.path, height:117, width:175, crop: :fill, class: "product-image" %>
+            <% else %>
+              <img src="http://unsplash.it/300/200?random" alt="kudoz" class="product-image hidden-xs">
+            <% end %>
             <div class='product-body'>
               <h3> <%= product.name %></h3>
               <p><%=product.tagline %></p>
