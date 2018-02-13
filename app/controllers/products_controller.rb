@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
   before_action :find_product, only: [:show,:edit,:update,:destroy]
+  before_action :validate_ownership, only: [:edit,:update,:destroy]
 
   def index
     if params[:category]
@@ -52,4 +53,11 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  private
+  def validate_ownership
+    @product = current_user.products.find_by(id: params[:id])
+    unless @product
+      redirect_to products_path, flash: {alert: "Vous n'avez pas les droits pour cette action"}
+    end
+  end
 end
