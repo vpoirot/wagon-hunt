@@ -7,7 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Product.destroy_all
+User.destroy_all
+vincent = User.create!(email: 'vincent.poirot@gmail.com', password: 'testtest')
+marion = User.create!(email: 'marion.poirot@gmail.com', password: 'testtest')
+toto = User.create!(email: 'toto@gmail.com', password: 'totototo')
 
-Product.create!(name: "Gogol", url:"http://www.gogol.com", tagline:"Best search", category:"Tech")
-Product.create!(name: "Vincent", url:"http://www.vincent.com", tagline:"Best man",category:"Education")
-Product.create!(name: "Marion", url:"http://www.marion.com", tagline:"Best woman",category:"Lifestyle")
+Product.create!(user: vincent, name: "Gogol", url:"http://www.gogol.com", tagline:"Best search", category:"Tech")
+Product.create!(user: marion, name: "Vincent", url:"http://www.vincent.com", tagline:"Best man",category:"Education")
+Product.create!(user: toto, name: "Marion", url:"http://www.marion.com", tagline:"Best woman",category:"Lifestyle")
