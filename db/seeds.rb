@@ -12,6 +12,11 @@ vincent = User.create!(email: 'vincent.poirot@gmail.com', password: 'testtest')
 marion = User.create!(email: 'marion.poirot@gmail.com', password: 'testtest')
 toto = User.create!(email: 'toto@gmail.com', password: 'totototo')
 
-Product.create!(user: vincent, name: "Gogol", url:"http://www.gogol.com", tagline:"Best search", category:"Tech")
-Product.create!(user: marion, name: "Vincent", url:"http://www.vincent.com", tagline:"Best man",category:"Education")
-Product.create!(user: toto, name: "Marion", url:"http://www.marion.com", tagline:"Best woman",category:"Lifestyle")
+gogol= Product.create!(user: vincent, name: "Gogol", url:"http://www.gogol.com", tagline:"Best search", category:"Tech")
+vincent_p= Product.create!(user: marion, name: "Vincent", url:"http://www.vincent.com", tagline:"Best man",category:"Education")
+marion_p= Product.create!(user: toto, name: "Marion", url:"http://www.marion.com", tagline:"Best woman",category:"Lifestyle")
+
+gogol.upvotes.create! user: vincent
+vincent_p.upvotes.create! user: marion
+marion_p.upvotes.create! user: toto
+gogol.upvotes.create! user:marion

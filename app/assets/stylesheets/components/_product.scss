@@ -37,6 +37,25 @@
   font-size: 13px;
   line-height: 20px;
 }
+
+a.product-upvote{
+  color:black;
+}
+
+.product-upvoted {
+  padding-right: 20px;
+  text-align: center;
+  transition: all 0.15s ease;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+  color:$blue;
+}
+
+a.product-upvoted{
+  color:$blue;
+}
+
 .product-count {
   margin: 2px 0 0;
 }
@@ -50,6 +69,11 @@
   border-bottom: 9px solid black;
   border-radius: 2px;
   margin: auto;
+}
+
+.product-upvoted .product-arrow {
+  border-bottom-color: $blue;
+
 }
 
 /* Controls design */
@@ -82,6 +106,7 @@
 .product-upvote:hover, .product-upvote.product-upvote-upvoted {
   color: #5898f1;
   cursor: pointer;
+  text-decoration: none;
 }
 .product-upvote-upvoted .product-arrow {
   border-bottom-color: #5898f1;
