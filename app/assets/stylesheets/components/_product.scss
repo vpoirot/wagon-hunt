@@ -30,6 +30,7 @@
 
 /* Upvote design */
 .product-upvote {
+  display: inline-block;
   padding-right: 20px;
   text-align: center;
   transition: all 0.15s ease;
@@ -43,6 +44,7 @@ a.product-upvote{
 }
 
 .product-upvoted {
+  display: inline-block;
   padding-right: 20px;
   text-align: center;
   transition: all 0.15s ease;

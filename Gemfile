@@ -13,6 +13,7 @@ gem "attachinary"
 gem "jquery-fileupload-rails"
 gem "coffee-rails"
 
+gem 'jquery-rails'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
